@@ -1,11 +1,21 @@
 import java.util.ArrayList;
 
-public interface Research {
-    ArrayList<String> getParents(Person person);
-    ArrayList<String> getChildren(Person person);
-    ArrayList<String> getAunt_uncle(Person person);
+public class Research {
+    ArrayList<String> getParents(Person person) {
+        return null;
+    }
+
+    ArrayList<String> getChildren(Person person) {
+        return null;
+    }
+
+    ArrayList<String> getAunt_uncle(Person person) {
+        return null;
+    }
 
     //    ArrayList<String> getBrotherSister(Person person);
 //    ArrayList<String> getPartners(Person person);
-    ArrayList<String> spend(Person person, Relationship rel);
+    ArrayList<String> spend(Person person, Relationship rel) {
+        return null;
+    }
 }
