@@ -1,7 +1,7 @@
 package GeoWithResearch;
 
 import java.util.ArrayList;
-
+import java.util.Iterator;
 
 
 public class GeoTree implements GenealogicalTree{
@@ -31,11 +31,6 @@ public class GeoTree implements GenealogicalTree{
         return result;
     }
 
-    @Override
-    public ArrayList<String> spend(Person person, Relationship rel) {
-        return null;
-    }
-
 
     @Override
     public ArrayList<String> getRelationships(Person p, Relationship re) {
@@ -47,6 +42,23 @@ public class GeoTree implements GenealogicalTree{
         }
         return result;
     }
+
+
+        public ArrayList<String> removeRelationship (Person p) {
+
+        ArrayList<String> res = new ArrayList<>();
+        res.add("Все отношения " + p.getFullName() + " с родственниками женского пола: ");
+        Iterator<Node> iterator = tree.iterator();
+        while (iterator.hasNext()) {
+            Node node = iterator.next();
+            if (node.p1.getFullName().equals(p.getFullName()) && node.p2.getGender().equals(Gender.female)){
+                iterator.remove();
+                res.add(node.re + ": " + node.getP2().getFullName());
+            }
+        }
+        return res;
+    }
+
 
 }
 

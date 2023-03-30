@@ -1,7 +1,9 @@
 package Pets;
 
+import java.util.Random;
+
 public abstract class Pet {
-    private static String petName;
+    private String petName;
     private int petAge;
     private Gender gender;
     private String petColour;
@@ -32,7 +34,7 @@ public abstract class Pet {
         this.petColour = petColour;
     }
 
-    public static String getPetName() {
+    public String getPetName() {
         return petName;
     }
 
@@ -65,13 +67,22 @@ public abstract class Pet {
     }
 
     public abstract void callReply();
-    public abstract void purr();
 
-    public void poop() {
-    }
+    protected abstract void poop();
 
     public abstract void askForFood(Human human);
 
-    public static void voice() {
+    public abstract void voice();
+
+    public abstract void crunch();
+
+//    int hunger;
+
+    public int getHungry() {;
+//        int hunger = 0;
+        Random random = new Random();
+        int hunger = random.nextInt(100);
+        return hunger;
     }
+
 }

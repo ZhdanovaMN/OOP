@@ -1,5 +1,7 @@
 package Pets;
 
+import java.util.Random;
+
 public class Cat extends Pet implements Voice{
     public Cat(String name, int age, Gender gender, String petColor) {
         super(name, age, gender, petColor);
@@ -32,18 +34,29 @@ public class Cat extends Pet implements Voice{
         System.out.println(getPetName() + " мурлычет");
     }
 
+    @Override
     public void poop() {
         System.out.println(getPetName() + " самозабвенно гадит в тапки");
     }
+    public Random random = new Random();
 
     @Override
     public void askForFood(Human human) {
-        System.out.println(getPetName() + " орет и просит еду у " + human.getFullName());
+        if (getHungry() > 50) {
+            System.out.println(getPetName() + " орет и просит еду у " + human.getFullName());
+        } else {
+            System.out.println(getPetName() + " спит");
+        }
     }
 
 
-    public static void voice() {
-        System.out.println(Pet.getPetName() + " урчит и царапает диван");
+    public void voice() {
+        System.out.println(getPetName() + " урчит и царапает диван");
+    }
+
+    @Override
+    public void crunch() {
+
     }
 
 }

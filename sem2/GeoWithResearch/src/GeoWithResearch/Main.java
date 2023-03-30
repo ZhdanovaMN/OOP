@@ -48,5 +48,9 @@ public class Main {
         System.out.println(gt.getRelationships(ivan, Relationship.niece_nephew));
         System.out.println(gt.getRelationships(ivan, Relationship.aunt_uncle));
 
+        System.out.println(gt.removeRelationship(ivan));
+        SaveToFile saver = new SaveToFile();
+        saver.save("src/GeoWithResearch/GT.txt", gt);
+
     }
 }

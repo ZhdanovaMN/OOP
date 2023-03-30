@@ -29,28 +29,28 @@ public class Human {
     }
 
 
-    public void feed(Cat cat) {
-        System.out.println(fullName + " кормит " + cat.getPetName());
-        System.out.println(cat.getPetName() + " теперь сыт");
-        cat.purr();
+    public void feed(Pet pet) {
+        System.out.println(fullName + " кормит " + pet.getPetName());
+        System.out.println(pet.getPetName() + " теперь сыт");
+//        cat.purr();
     }
 
-    public void stroke(Cat cat) {
-        System.out.println(fullName + " гладит " + cat.getPetName());
-        System.out.println(cat.getPetName() + " подставляет пузико");
+    public void stroke(Pet pet) {
+        System.out.println(fullName + " гладит " + pet.getPetName());
+        System.out.println(pet.getPetName() + " подставляет пузико");
     }
 
-    public void call(Cat cat) {
+    public void call(Pet cat) {
         System.out.println(fullName + " зовет " + cat.getPetName() + " кыс-кыс-кыс");
         cat.callReply();
     }
 
-    public void talk(Cat cat) {
-        System.out.println(fullName + " рассказывает " + cat.getPetName() + " историю своей жизни");
-        cat.callReply();
+    public void talk(Pet pet) {
+        System.out.println(fullName + " рассказывает " + pet.getPetName() + " историю своей жизни");
+        pet.callReply();
     }
-    public void throwValenok(Cat cat) {
-        System.out.println(fullName + " кидает в " + cat.getPetName() + " валенком");
+    public void throwValenok(Pet pet) {
+        System.out.println(fullName + " кидает в " + pet.getPetName() + " валенком");
     }
 
 }

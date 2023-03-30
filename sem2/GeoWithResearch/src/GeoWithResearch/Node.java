@@ -27,7 +27,7 @@ public class Node {
         return String.format("<%s %s %s>", p1, re, p2);
     }
 
-    @Override
+//    @Override
     public int hashCode() {
         StringBuilder hash = new StringBuilder();
         hash.append(this.p1.getFullName().hashCode());

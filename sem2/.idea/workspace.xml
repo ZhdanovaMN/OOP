@@ -2,7 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d808d44-d696-488f-ac8e-fdcde2c2685e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../sem1/task1/src/Research.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sem1/task1/src/Research.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeoWithResearch/out/production/GeoWithResearch/GeoWithResearch/Gender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeoWithResearch/out/production/GeoWithResearch/GeoWithResearch/GenealogicalTree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeoWithResearch/out/production/GeoWithResearch/GeoWithResearch/GeoTree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeoWithResearch/out/production/GeoWithResearch/GeoWithResearch/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeoWithResearch/out/production/GeoWithResearch/GeoWithResearch/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeoWithResearch/out/production/GeoWithResearch/GeoWithResearch/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeoWithResearch/out/production/GeoWithResearch/GeoWithResearch/Relationship$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeoWithResearch/out/production/GeoWithResearch/GeoWithResearch/Relationship$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeoWithResearch/out/production/GeoWithResearch/GeoWithResearch/Relationship$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeoWithResearch/out/production/GeoWithResearch/GeoWithResearch/Relationship$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeoWithResearch/out/production/GeoWithResearch/GeoWithResearch/Relationship$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeoWithResearch/out/production/GeoWithResearch/GeoWithResearch/Relationship$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeoWithResearch/out/production/GeoWithResearch/GeoWithResearch/Relationship$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeoWithResearch/out/production/GeoWithResearch/GeoWithResearch/Relationship.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeoWithResearch/out/production/GeoWithResearch/GeoWithResearch/Research.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeoWithResearch/src/GeoWithResearch/Gender.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeoWithResearch/src/GeoWithResearch/GenealogicalTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeoWithResearch/src/GeoWithResearch/GeoTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeoWithResearch/src/GeoWithResearch/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeoWithResearch/src/GeoWithResearch/Node.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeoWithResearch/src/GeoWithResearch/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeoWithResearch/src/GeoWithResearch/Relationship.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeoWithResearch/src/GeoWithResearch/Research.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,13 +40,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/GB/practice/OOP/homework/sem2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/GB/practice/OOP/homework/sem2&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

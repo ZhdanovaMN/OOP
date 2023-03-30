@@ -1,6 +1,5 @@
 package GeoWithResearch;
 
-import GeoWithResearch.Gender;
 
 public class Person {
     private String fullName;
@@ -22,10 +21,15 @@ public class Person {
         return gender;
     }
 
+    public void setGender(Gender gender) {
+        this.gender = gender;
+    }
+
     @Override
     public String toString() {
         return "GeoWithResearch.Person{" +
                 "gender=" + gender +
                 '}';
     }
+
 }
