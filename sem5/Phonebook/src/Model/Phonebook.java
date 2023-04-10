@@ -1,25 +1,29 @@
-import java.io.BufferedWriter;
-import java.io.FileWriter;
+package Model;
+
+import View.Menu;
+
+import javax.xml.stream.XMLStreamException;
 import java.io.IOException;
 import java.util.*;
 
-public class Phonebook {
+public class Phonebook implements ContactAccess {
 
     private List<Contact> contacts;
     private String file = "contacts";
-    private ExportFile exportFile;
-    private ImportFile importFile;
+    private ExportFileToFormat exportFile;
+    private ImportFileFromFormat importFile;
     private Map<String, List<String>> phonebook = new HashMap<>();
 
     public Phonebook(String filePath) {
         this.contacts = new ArrayList<>();
-        this.exportFile = new ExportFile(filePath);
-        this.importFile = new ImportFile(filePath);
+        this.exportFile = new ExportFileToFormat(filePath);
+        this.importFile = new ImportFileFromFormat(filePath);
     }
 
     public Phonebook() {
 
     }
+
     public List<Contact> getPhonebook() {
         return (List<Contact>) phonebook;
     }
@@ -28,6 +32,8 @@ public class Phonebook {
         this.phonebook = (Map<String, List<String>>) phonebook;
     }
 
+
+    @Override
     public void printAll() {
         for (Map.Entry<String, List<String>> entry : phonebook.entrySet()) {
             System.out.print(entry.getKey() + ": ");
@@ -39,7 +45,12 @@ public class Phonebook {
         }
     }
 
-    public void addNumber(String name, String phoneNumber) {
+    @Override
+    public void addNumber(Scanner scanner) {
+        System.out.println("Введите имя: ");
+        String name = scanner.nextLine();
+        System.out.println("Введите номер телефона: ");
+        String phoneNumber = scanner.nextLine();
         if (phonebook.containsKey(name)) {
             phonebook.get(name).add(phoneNumber);
         } else {
@@ -47,8 +58,10 @@ public class Phonebook {
             numbers.add(phoneNumber);
             phonebook.put(name, numbers);
         }
+        System.out.println("Контакт добавлен");
     }
 
+    @Override
     public void removeContact(Scanner scanner) {
         System.out.println("Введите информацию о контакте, который нужно удалить:");
         System.out.print("Имя или номер телефона: ");
@@ -80,6 +93,7 @@ public class Phonebook {
 
     }
 
+    @Override
     public List<Contact> searchContacts(String searchTerm) {
         List<Contact> searchContact = new ArrayList<>();
         for (Contact contact : contacts) {
@@ -93,27 +107,18 @@ public class Phonebook {
         return searchContact;
     }
 
-    public void exportContactsToXml() throws IOException {
-        exportToXml(contacts, this.file);
+    @Override
+    public void exportContactsToXml() throws IOException, XMLStreamException {
+        exportFile.exportToXml(contacts, this.file);
     }
-    public void exportToXml(List<Contact> contacts, String filePath) throws IOException {
-        // Пока не реализовано
 
-    }
+    @Override
     public void exportContactsToCsv() throws IOException {
-        exportToCsv(contacts, this.file);
+        exportFile.exportToCsv(contacts, this.file);
     }
 
-    public void exportToCsv(List<Contact> contacts, String filePath) throws IOException {
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(filePath + ".csv"))) {
-            for (Contact contact : contacts) {
-                bw.write(contact.getName() + "," + contact.getPhoneNumber());
-                bw.newLine();
-            }
-        }
-    }
-
-    public void importContactsFromXml() throws IOException {
+    @Override
+    public void importContactsFromXml() throws IOException, XMLStreamException {
         List<Contact> importedContacts = importFile.importFromXml(this.file);
         for (Contact contact : importedContacts) {
             if (!contacts.contains(contact)) {
@@ -121,6 +126,8 @@ public class Phonebook {
             }
         }
     }
+
+    @Override
     public void importContactsFromCsv() throws IOException {
         List<Contact> importedContacts = importFile.importFromCsv(this.file);
         for (Contact contact : importedContacts) {
@@ -129,6 +136,7 @@ public class Phonebook {
             }
         }
     }
+
 }
 
 

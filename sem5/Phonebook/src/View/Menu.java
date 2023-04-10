@@ -1,5 +1,7 @@
-import java.time.LocalDateTime;
-import java.util.List;
+package View;
+
+import Model.Phonebook;
+
 import java.util.Scanner;
 
 public class Menu {
@@ -26,11 +28,8 @@ public class Menu {
             int taskID;
             switch (optionChoice){
                     case 1:
-                        System.out.println("Введите имя: ");
-                        String name = scanner.nextLine();
-                        System.out.println("Введите номер телефона: ");
-                        String phoneNumber = scanner.nextLine();
-                        phonebook.addNumber(name, phoneNumber);
+
+                        phonebook.addNumber(scanner);
                         break;
                     case 2:
                         phonebook.removeContact(scanner);
@@ -66,5 +65,6 @@ public class Menu {
         }
         scanner.close();
     }
+
 
 }
